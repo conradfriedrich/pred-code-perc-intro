@@ -1,0 +1,106 @@
+
+\documentclass[11pt, handout]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Copenhagen} 
+\usecolortheme{dove}
+\usepackage{graphicx}
+% \setbeamercovered{transparent}
+
+
+\newcommand{\prule}{\vspace{-8pt}\rule{50pt}{0.5pt}}
+
+
+
+
+\title[The Predictive Mind]{Jakob Hohwy: The Predictive Mind}
+\subtitle{Chapters 1\&2}
+\author{Conrad Friedrich}
+\institute[Uni Köln]{Universität zu Köln}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+  \maketitle
+\end{frame}
+
+\section{Das Problem der Wahrnehmung}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+  \item Vereinheitlichende Theorie des Geistes: Wahrnehmung, Handlung,
+    und ``alles mentale dazwischen'' (Auch Bewusstsein?).
+  \item Zentrale Idee: Das Gehirn lässt sich als
+    Hypothesen-Prüf-Mechanismus betrachten, der durchgehend damit
+    beschäftigt ist, die Abweichung seiner Vorhersagen/Erwartungen
+    (predictions) von seinen Sinneseindrücken zu \emph{minimieren}.
+  \item Hier: Fokus auf Wahrnehmung.
+  \item Die Sinneseindrücke formen Wahrnehmung nicht direkt, sondern
+    sind Feedback zu den Erwartungen und Anfragen des Geistes ``an die
+    Welt''.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+  \item Wahrnehmung besteht in (lässt sich am besten beschreiben als)
+    unbewusster Inferenz auf die wahrscheinlichste \emph{Ursache}
+    meiner \emph{rohen Sinneseindrücke}.
+  \item Direkter, unmittelbarer Zugang nur zu den Sinneseindrücken,
+    nicht zu den Dingen ``in der Welt''.
+  \item \emph{Gewusst} (in einem starken Sinn, Gewissheit) werden nur
+    die Effekte, d.h. Sinneseindrücke. Um etwas über die
+    ``versteckten'' Ursachen zu erfahren, ist Inferenz nötig.
+  \item Inferenz weniger stark als Gewissheit und inbesondere
+    nicht-monoton.
+  \item Denn: Zwischen Ursachen und Effekten besteht keine $1$:$1$
+    Relation (sondern $n$:$m$).
+  \item D.h. Verschiedene Ursachen können denselben Effekt haben, und
+    eine Ursache verschiedene Effekte.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[height=\paperheight]{bicycledistorted.jpeg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+  \item Verschiedene Objekte, Zustände könnten diesen Sinneseindruck
+    verursachen:
+    \begin{itemize}[<+->]
+    \item Ein Fahrrad, das im Gebüsch liegt
+    \item Einzelne Fahrradteile, die irgendwie im Gebüsch hängen
+      geblieben sind
+    \item Ein ungewöhnlich genau koordinierter Schwarm Bienen
+    \end{itemize}
+  \item Wie kommen wir vom Sinneseindruck zum (offensichtlichen)
+    Ergebnis, dass hier ein Fahrrad im Gebüsch liegt?
+  \end{itemize}
+
+\end{frame}
+
+\section{Bayesianistische Wahrnehmung}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+  \item Also: Wir brauchen eine \emph{Inferenz} auf die (explanatorisch) beste Ursache.
+  \item Not any old inference will do.
+  \item 
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+Was hat das mit Prediction (Vorhersage) zu tun?
+
+\end{frame}
+
+Zu intellektualistisch? -> Immediate Intuition von formaler Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet werden. Hier aber perception: Inhalte mussen keinen propositionalen Gehalt haben, nicht bewusst zugaenglich sein, usw.
+
+\end{document}
+
+

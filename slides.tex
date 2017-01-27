@@ -1,16 +1,27 @@
 
-\documentclass[11pt, handout]{beamer}
+%\documentclass[12pt]{beamer}
+\documentclass[12pt, handout]{beamer}
 \usepackage[utf8]{inputenc}
 \usetheme{Copenhagen} 
 \usecolortheme{dove}
 \usepackage{graphicx}
-% \setbeamercovered{transparent}
+\usefonttheme[onlymath]{serif}% \setbeamercovered{transparent}
 
 
 \newcommand{\prule}{\vspace{-8pt}\rule{50pt}{0.5pt}}
 
 
 
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 
 \title[The Predictive Mind]{Jakob Hohwy: The Predictive Mind}
 \subtitle{Chapters 1\&2}
@@ -24,7 +35,7 @@
   \maketitle
 \end{frame}
 
-\section{Das Problem der Wahrnehmung}
+\section{Ein Problem der Wahrnehmung}
 
 \begin{frame}
   \begin{itemize}[<+->]
@@ -82,22 +93,108 @@
 
 \end{frame}
 
-\section{Bayesianistische Wahrnehmung}
 
 \begin{frame}
   \begin{itemize}[<+->]
-  \item Also: Wir brauchen eine \emph{Inferenz} auf die (explanatorisch) beste Ursache.
-  \item Not any old inference will do.
-  \item 
+  \item Also: Wir brauchen eine \emph{Inferenz} auf die `beste' Ursache.
+  \item Not any old inference will do: Besondere zusätzliche
+    Beschränkungen auf die Art der Inferenz.
+    \begin{itemize}[<+->]
+    \item Hintergrundwissen des Agenten.
+    \item Möglichkeit, gute/richtige Inferenz von schlechter/falscher
+      abzugrenzen.
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
+\section{Bayesianistische Inferenz}
+
+\subsection{Zutaten}
+
+\begin{frame}
+  \begin{itemize}[<+->]
+  \item Gegeben Sinneseindruck und Hintergrundwissen soll auf die
+    `richtige' Ursache des Sinneseindrucks geschlossen werden.
+  \item Ranking der möglichen Ursachen nach Wahrscheinlichkeit.
+  \item Die `beste' Ursache scheint guter Kandidat für den
+    Wahrnehmungsinhalt zu sein.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame} 
+  Zutaten für die Bayesianistische Inferenz:
+
+  \begin{description}[xxxxxxxxx]
+  \item[$h_1,...,h_n$] Möglichen Hypothesen als Ursache eines
+    Sinneseindrucks
+  \item[$e$] Gegebener Sinneseindruck
+  \item[$P(h_i)$] \emph{Prior:} Wahrscheinlichkeit einer Hypothese
+    $h_i$, unabhängig davon, ob es die Ursache ist. Abhängig vom
+    Hintergrundwissen.
+  \item[$P(e|h_i)$] \emph{Likelihood:} Wahrscheinlichkeit, dass die in
+    der Hypothese beschrieben Ursache so einen Sinneseindruck
+    hervorrufen würde. Abhängig vom Hintergrundwissen. Maß dafür, wie
+    gut eine Hypothese den Sinneseindruck \emph{vorhersagt}.
+  \end{description}
+
+  \begin{itemize}[<+->]
+  \item Daraus lässt sich für jedes $h_i$ die bedingte
+    Wahrscheinlichkeit gegeben $e$ errechnen.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+  Vereinfaches Bayes Theorem \\{\scriptsize (Standardvariante folgt
+    direkt aus der Definition von bedingter Wahrscheinlichkeit)}
+
+  \begin{align*}
+    P(h_i|e) &= P(e|h_i)P(h_i) \\
+    \mathrm{Posterior \: Probability} &= \mathrm{Likelihood} \times  \mathrm{Prior \: Probability}
+  \end{align*}
+
+  \begin{itemize}[<+->]
+  \item Hypothese $h_i$, für die $P(h_i|e)$ maximal ist, stellt
+    plausibelste Ursache des Sinneseindrucks $e$ dar, gegeben das
+    Hintergrundwissen des Agenten.
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Beispiel}
+
+\begin{frame}
+  Beispiel.
+  \begin{description}[xxxxxxx]
+  \item[$e$] {\small Sinneseindruck: Ein seltsames Klopfen.}
+  \item[$h_1$] {\small Ein Specht klopft an der Wand.}
+  \item[$h_2$] {\small Ein Einbrecher werkelt an der Tür.} \\ $...$
+  \item[$h_{978}$] {\small Ich bin ein BIV und bekomme gerade einen
+      elektrischen Stimulus entsprechend dem Stimulus.}
+  \end{description}
+
+  {\small Angenommen, ich habe zuletzt viele Spechte in der
+    Nachbarschaft bemerkt, aber eher wenige Einbrecher. Ich habe mal
+    ein Seminar zum Skeptizismus besucht und halte das ganze für großen Humbug. Dann gilt für die \emph{Prior Probabilities}}
+
+  \begin{center}
+  $P(h_1) > P(h_2) \gg P(h_{978})$.
+  \end{center}
+
+\end{frame}
 
 
 \begin{frame}
-Was hat das mit Prediction (Vorhersage) zu tun?
-
+  Was hat das mit Prediction (Vorhersage) zu tun?
 \end{frame}
+
+Zu intellektualistisch? -> Immediate Intuition von formaler
+Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet
+werden. Hier aber perception: Inhalte mussen keinen propositionalen
+Gehalt haben, nicht bewusst zugaenglich sein, usw.
+
 \end{document}
 
 

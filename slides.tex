@@ -1,10 +1,11 @@
 
 %\documentclass[12pt]{beamer}
-\documentclass[12pt, handout]{beamer}
+\documentclass[11pt, handout]{beamer}
 \usepackage[utf8]{inputenc}
 \usetheme{Copenhagen} 
 \usecolortheme{dove}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usefonttheme[onlymath]{serif}% \setbeamercovered{transparent}
 
 
@@ -23,7 +24,7 @@
   \end{frame}
 }
 
-\title[The Predictive Mind]{Jakob Hohwy: The Predictive Mind}
+\title[Hohwy: The Predictive Mind]{Jakob Hohwy: The Predictive Mind}
 \subtitle{Chapters 1\&2}
 \author{Conrad Friedrich}
 \institute[Uni Köln]{Universität zu Köln}
@@ -160,8 +161,24 @@
   \item Hypothese $h_i$, für die $P(h_i|e)$ maximal ist, stellt
     plausibelste Ursache des Sinneseindrucks $e$ dar, gegeben das
     Hintergrundwissen des Agenten.
-
   \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\small
+
+      \begin{itemize}[<+->]
+      \item Bayes Theorem eigentlich
+        \begin{equation*}
+        P(h_i|e) = \frac{P(e|h_i)P(h_i)}{P(e)}
+      \end{equation*}
+      
+      \item Wieso wird der Nenner $P(e)$  weggelassen?
+      \item Für das reine Ranking der Hypothesen irrelevant, da konstanter Faktor.
+      \item Mathematisch: Normalisierungskonstante, so dass $\sum_{i} P(h_i|e) = 1$ (und nicht weniger).
+      \end{itemize}
 
 \end{frame}
 
@@ -206,12 +223,17 @@
 
 
 \begin{frame}
-  Was hat das mit Prediction (Vorhersage) zu tun? Immerhin heißt es \emph{Predictive} Coding/Processing/Mind.
-  In der Wahrscheinlichkeitstheorie:
+  Was hat das mit Prediction (Vorhersage) zu tun? Immerhin heißt es
+  \emph{Predictive} Coding/Processing/Mind.  In der
+  Wahrscheinlichkeitstheorie:
   \begin{itemize}[<+->]
-  \item \textbf{Inference}: Reasoning from effects to causes (\emph{latent} or \emph{hidden}).
-  \item \textbf{Prediction}: Reasoning from causes to (future) effects.
-  \item Schlussfolgern wie vorgestellt Beispiel für Inferenz. Beide Vorgänge für Modell der Wahrnehmung relevant (s. später: prediction error minimization)
+  \item \textbf{Inference}: Reasoning from effects to causes
+    (\emph{latent} or \emph{hidden}).
+  \item \textbf{Prediction}: Reasoning from causes to (future)
+    effects.
+  \item Schlussfolgern wie vorgestellt Beispiel für Inferenz. Beide
+    Vorgänge für Modell der Wahrnehmung relevant (s. später:
+    prediction error minimization)
   \end{itemize}
 \end{frame}
 
@@ -223,28 +245,39 @@
   Beispiel für simple Probalistische Inferenz vom Effekt zur
   Ursache. Aber beschreibt das auch \emph{Wahrnehmung} adäquat? Hohwy
   nennt vier Einwände zu dieser Interpretation.  \footnotesize
-    \begin{description}[<+->]
-    \item[Einwand 1] Probalistische Inferenz scheint viel zu
-      intellektualistisch zu sein, um einen automatischen Vorgang wie
-      Wahrnehmung erklären zu können.
-    \item[Einwand 2] Unangebrachte Antromorphisierung von Prozessen
-      im Gehirn: Wieso sollte das Gehirn etwas glauben oder
-      Schlussfolgern, dass wir nicht bewusst machen?
-    \item[Einwand 3] Keine offensichtliche Erklärung der
-      Phänomenologie von Wahrnehmung. Wahrnehmung fühlt sich wie etwas
-      an, aber beschreibt die Inferenz nicht nur reine begriffliche
-      Kategosierung von Input?
-    \item[Einwand 4] Arbitrarität der \emph{Prior Beliefs}: Wie
-      zeichnet dieses Modell probabilistisch konsistente (d.h. keine
-      Verletzung der Kolmogorov-Axiome), aber völlig realitätsferne
-      Wahrscheinlichkeitsfuntionen als schlecht/falsch aus?
-    \end{description}
-  \end{frame}
+  \begin{description}[<+->]
+  \item[Einwand 1] Probalistische Inferenz scheint viel zu
+    intellektualistisch zu sein, um einen automatischen Vorgang wie
+    Wahrnehmung erklären zu können.
+  \item[Einwand 2] Unangebrachte Antromorphisierung von Prozessen im
+    Gehirn: Wieso sollte das Gehirn etwas glauben oder Schlussfolgern,
+    dass wir nicht bewusst machen?
+  \item[Einwand 3] Keine offensichtliche Erklärung der Phänomenologie
+    von Wahrnehmung. Wahrnehmung fühlt sich wie etwas an, aber
+    beschreibt die Inferenz nicht nur reine begriffliche Kategosierung
+    von Input?
+  \item[Einwand 4] Arbitrarität der \emph{Prior Beliefs}: Wie zeichnet
+    dieses Modell probabilistisch konsistente (d.h. keine Verletzung
+    der Kolmogorov-Axiome), aber völlig realitätsferne
+    Wahrscheinlichkeitsfuntionen als schlecht/falsch aus?
+  \end{description}
+\end{frame}
 
-  \subsection{1. Intellectualist Objection}
+\subsection{Einwand vom Intellektualistismus}
 
 \begin{frame}
-Art des Arguments:
+{\large 1. Intellectualist Objection}
+  Zu intellektualistisch? Immediate Intuition von formaler
+  Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet
+  werden. Hier aber perception: Inhalte mussen keinen propositionalen
+  Gehalt haben, nicht bewusst zugaenglich sein, usw.  Ähnlichkeit zu
+  Konditionalisierungregel in formaler Erkenntnistheorie. Unterschied:
+  Keine Anforderung, dass $e$ oder $h$ Überzeugungen sind,
+  möglicherweise nicht-propotisitional.
+\end{frame}
+
+\begin{frame}
+  Argument:
 
   \begin{enumerate}[<+->]
   \item Bayesian Inference ist schwer und kognitiv anspruchsvoll.
@@ -254,30 +287,167 @@ Art des Arguments:
     \end{itemize}
   \item Wahrnehmung ist einfach und automatisch.
     \begin{itemize}[<+->]
-    \item (Kinder und auch Tiere können reliabel wahrnehmen. Außerdem
+    \item Kinder und auch Tiere können reliabel wahrnehmen. Außerdem
     
     \end{itemize}
-\item Also: Bayesian Inference und Wahrnehmung sind verschieden.
+  \item Also: Bayesian Inference und Wahrnehmung sind verschieden.
   \end{enumerate}
-
 
 \end{frame}
 
 \begin{frame}
-  Zu intellektualistisch? -> Immediate Intuition von formaler
-  Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet
-  werden. Hier aber perception: Inhalte mussen keinen propositionalen
-  Gehalt haben, nicht bewusst zugaenglich sein, usw.  Ähnlichkeit zu
-  Konditionalisierungregel in formaler Erkenntnistheorie. Unterschied:
-  Keine Anforderung, dass $e$ oder $h$ Überzeugungen sind,
-  möglicherweise nicht-propotisitional.
+  Hohwys Strategie:
+  \begin{itemize}[<+->]
+  \item Fallstudien, deren \emph{beste Erklärung} eine automatische
+    Inferenzleistung des Gehirns ist.
+  \item Mindestens eine der beiden Prämissen ist dann nicht haltbar.
+  \item Studien basieren auf dem Phänomen \emph{Binocular Rivalry}.
+  \item Hohwy: Phänomen lässt sich am besten mit Bayesian Inference
+    erklären.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  Binocular Rivalry
+  \begin{quote}
+    If a picture of a house is shown to one eye and a picture of a
+    face is shown to the other, then one should surely just see a
+    face-house. But this is not what happens, as Porta and Wheatstone
+    and many others have described. The brain somehow seems to decide
+    that there are two distinct things out there, a face and a
+    house—and perception duly alternates between seeing one or the
+    other every few seconds, sometimes with periods of patchy rivalry
+    in between.
+  \end{quote}
+  \begin{itemize}[<+->]
+  \item Varianten von Diaz-Caneja (1928), Logothetis (1996), Denison,
+    Piazza et al. (2011), Zhou, Jiang et al. (2010).
+  \end{itemize}
+   
+\end{frame}
+
+\begin{frame}
+
+  Input linkes Auge / Rechtes Auge
+
+  \begin{center}
+    \includegraphics[height=0.2\paperheight]{facehouse.png}
+  \end{center}
+  `Intuitiv' erwartetes Perzept
+
+  \begin{center}
+    \includegraphics[height=0.2\paperheight]{facehousemash.png}
+  \end{center}
+
+  Stattdessen stabile sequentielle Wahrnehmung:
+  \begin{center}
+    \includegraphics[height=0.2\paperheight]{facehousedistinct.png}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+  \small Hohwy: Für dieses Phänomen lässt sich eine plausible
+  Bayesianistische Geschichte erzählen.
+
+  \begin{description}[<+->]
+  \item[Input]
+    \begin{description}[<+->]
+    \item[$e$] Gesicht/Haus linkes Auge/rechtes Auge
+
+    \end{description}
+  \item[Hypothesen]
+    \begin{description}
+    \item[$h_{f+h}$] Es ist ein Gesichts-Haus-Mix.
+    \item[$h_f$] Es ist ein Gesicht.
+    \item[$h_h$] Es ist ein Haus.
+    \end{description}
+  \item[Likelihoods] $P(e|h_f) \approx P(e|h_h) < P(e|h_{f+h})$.
+  \item[Priors] $P(h_f) > P(h_h) \gg P(h_{f+h})$.
+
+  \end{description}
+
+  \begin{description}[<+->]
+  \item[Posteriors] $P(h_f|e) > P(h_h|e) > P(h_{f+h}|e)$.
+  \end{description}
+
+\end{frame}
+
+\begin{frame}
+  Bayesianistisches Modell erklärt, warum ein konstantes Bild gesehen wird.
+
+  \begin{itemize}[<+->]
+  \item Alternierende Wahrnehmung wird in dieser simplen Version \emph{nicht} erklärt.
+  \item Trotzdem sieht Hohwy das Erklärungspotentiel als starke Evidenz für probabilistisches Wahrnehmungsschließen.
+  \item Weitere Evidenz: Probanden Priming-Effekt unterzogen, so dass sie mehrheitlich ein bestimmtes Bild sehen (Zhou, Jiang et al., 2010)
+    \begin{itemize}[<+->]
+    \item Input Bild Text Marker/Rose. Priming durch Rosen\emph{geruch}. Effekt durch Modell vorhergesagt.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+
+\subsection{Einwand vom Anthromorphismus}
+
+\begin{frame}
+{\large 2. Anthromorphist Objection}
+  \begin{itemize}[<+->]
+  \item Ist das Gehirn tatsächlich mit Probabilistischem Schließen
+    beschäftigt, oder ist das unzulässige `Anthromorphisierung' des
+    Gehirns?
+  \item Howhy argumentiert (a) funktionalistisch und (b) strukturell.
+  \item `Bayesian coding hypothesis': The brain represents sensory
+    information probabilistically, in the form of probability
+    distributions. \footnote{Knill/Pourget (2004)}
+  \item Fragestellung in Computational Cognitive Neuroscience.
+  \end{itemize}
+\end{frame}
+
+\subsection{Einwand von der Phänomenologie}
+
+\begin{frame}
+  {\large 3. Phenomenologist Objection}
+  \begin{itemize}[<+->]
+  \item Selbst wenn die Kategorisierung von Wahrnehmungsinhalten Bayesianistisch funktioniert, heißt das nicht, dass das Wahrnehmungserlebnis erklärbar wird. 
+  \item ``It is not just that we see a car but that we see it, as a car, from our own perspective.'' (p. 26)
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Einwand vom Skeptizismus}
+
+\begin{frame} {\large 4. Skepticist Objection}
+  \begin{itemize}[<+->]
+  \item Das bisher beschriebene Framework ist anfällig für
+    \emph{pathological Priors}:
+  \item Völlig absurde, realitätsfremde Priors zeichnen bestimmte
+    Hypothesen als wahrscheinlich aus, gegeben die Sinneseindrücke,
+    und können so bestärkt werden.
+  \item Bootstrapping-Problem (ähnlich epistemischem Internalismus).
+  \item Hohwys Antwort: Bisher nur allgemeines Bayesianisches
+    Framework, \emph{Predictive Coding} erfordert mehr: `Reality
+    Check'
+  \item \emph{Prediction Error Minimization}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+
+  {\Large References}
+
+  \begin{itemize}
+  \item Tong, Nakayama et al. Binocular Rivalry and Visual Awareness
+    in Human Extrastriate Cortex. Neuron (21), 1998.
+  \item Knill and Pourget. The Bayesian brain: the role of uncertainty
+    in neural coding and computation. TRENDS in Neurosciences (27),
+    2004.
+  \item Hohwy. The Predictive Mind. Oxford University Press, 2013.
+
+  \end{itemize}
+
+
 \end{frame}
 
 \end{document}
-
-
-\subsection{2. Anthromorphist Objection}
-
-\subsection{3. Phenomenologist Objection}
-
-\subsection{4. Pathologicalist Objection}

@@ -35,7 +35,9 @@
   \maketitle
 \end{frame}
 
-\section{Ein Problem der Wahrnehmung}
+\section{Perception and Bayesian Inference}
+
+\subsection{Motivation}
 
 \begin{frame}
   \begin{itemize}[<+->]
@@ -56,7 +58,7 @@
   \begin{itemize}[<+->]
   \item Wahrnehmung besteht in (lässt sich am besten beschreiben als)
     unbewusster Inferenz auf die wahrscheinlichste \emph{Ursache}
-    meiner \emph{rohen Sinneseindrücke}.
+    meiner \emph{rohen Sinneseindrücke} (und deren Vorhersage).
   \item Direkter, unmittelbarer Zugang nur zu den Sinneseindrücken,
     nicht zu den Dingen ``in der Welt''.
   \item \emph{Gewusst} (in einem starken Sinn, Gewissheit) werden nur
@@ -107,9 +109,6 @@
   \end{itemize}
 \end{frame}
 
-\section{Bayesianistische Inferenz}
-
-\subsection{Zutaten}
 
 \begin{frame}
   \begin{itemize}[<+->]
@@ -121,6 +120,8 @@
   \end{itemize}
 
 \end{frame}
+
+\subsection{Bayesian Inference}
 
 \begin{frame} 
   Zutaten für die Bayesianistische Inferenz:
@@ -159,11 +160,10 @@
   \item Hypothese $h_i$, für die $P(h_i|e)$ maximal ist, stellt
     plausibelste Ursache des Sinneseindrucks $e$ dar, gegeben das
     Hintergrundwissen des Agenten.
+
   \end{itemize}
 
 \end{frame}
-
-\subsection{Beispiel}
 
 \begin{frame}
   Beispiel.
@@ -171,30 +171,113 @@
   \item[$e$] {\small Sinneseindruck: Ein seltsames Klopfen.}
   \item[$h_1$] {\small Ein Specht klopft an der Wand.}
   \item[$h_2$] {\small Ein Einbrecher werkelt an der Tür.} \\ $...$
-  \item[$h_{978}$] {\small Ich bin ein BIV und bekomme gerade einen
-      elektrischen Stimulus entsprechend dem Stimulus.}
+  \item[$h_{815}$] {\small Ich bin ein BIV und bekomme gerade einen
+      elektrischen Stimulus entsprechend dem Sinneseindruck.}
   \end{description}
 
   {\small Angenommen, ich habe zuletzt viele Spechte in der
     Nachbarschaft bemerkt, aber eher wenige Einbrecher. Ich habe mal
-    ein Seminar zum Skeptizismus besucht und halte das ganze für großen Humbug. Dann gilt für die \emph{Prior Probabilities}}
+    ein Seminar zum Skeptizismus besucht und halte das ganze für
+    großen Humbug. Dann gilt für die \emph{Prior Probabilities}}
 
   \begin{center}
-  $P(h_1) > P(h_2) \gg P(h_{978})$.
+    $P(h_1) > P(h_2) \gg P(h_{815})$.
   \end{center}
+\end{frame}
 
+\begin{frame}
+  Aber:
+  \begin{center}
+    $P(e|h_{815}) > P(e|h_1) \approx P(e|h_2)$.
+  \end{center}
+  \begin{itemize}[<+->]
+  \item Da: Gegeben, ich bin \emph{tatsächlich} ein BIV, ist die
+    Wahrscheinlichkeit für jeden Sinneseindruck, den ich habe, sehr
+    hoch, sogar fast sicher.
+  \item Also höher als die anderen bedingten Wahrscheinlichkeiten.
+  \item Resultat des Rankings:
+    \begin{center}
+      $P(h_1|e) > P(h_2|e) > P(h_{815})$.
+    \end{center}
+  \item Die Spechthypothese erscheint am wahrscheinlichsten. Resultat
+    der Baysianistischen Inferenz - unbewusste Wahrnehmungsinferenz.
+  \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-  Was hat das mit Prediction (Vorhersage) zu tun?
+  Was hat das mit Prediction (Vorhersage) zu tun? Immerhin heißt es \emph{Predictive} Coding/Processing/Mind.
+  In der Wahrscheinlichkeitstheorie:
+  \begin{itemize}[<+->]
+  \item \textbf{Inference}: Reasoning from effects to causes (\emph{latent} or \emph{hidden}).
+  \item \textbf{Prediction}: Reasoning from causes to (future) effects.
+  \item Schlussfolgern wie vorgestellt Beispiel für Inferenz. Beide Vorgänge für Modell der Wahrnehmung relevant (s. später: prediction error minimization)
+  \end{itemize}
 \end{frame}
 
-Zu intellektualistisch? -> Immediate Intuition von formaler
-Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet
-werden. Hier aber perception: Inhalte mussen keinen propositionalen
-Gehalt haben, nicht bewusst zugaenglich sein, usw.
+
+
+\section{Objections}
+
+\begin{frame}
+  Beispiel für simple Probalistische Inferenz vom Effekt zur
+  Ursache. Aber beschreibt das auch \emph{Wahrnehmung} adäquat? Hohwy
+  nennt vier Einwände zu dieser Interpretation.  \footnotesize
+    \begin{description}[<+->]
+    \item[Einwand 1] Probalistische Inferenz scheint viel zu
+      intellektualistisch zu sein, um einen automatischen Vorgang wie
+      Wahrnehmung erklären zu können.
+    \item[Einwand 2] Unangebrachte Antromorphisierung von Prozessen
+      im Gehirn: Wieso sollte das Gehirn etwas glauben oder
+      Schlussfolgern, dass wir nicht bewusst machen?
+    \item[Einwand 3] Keine offensichtliche Erklärung der
+      Phänomenologie von Wahrnehmung. Wahrnehmung fühlt sich wie etwas
+      an, aber beschreibt die Inferenz nicht nur reine begriffliche
+      Kategosierung von Input?
+    \item[Einwand 4] Arbitrarität der \emph{Prior Beliefs}: Wie
+      zeichnet dieses Modell probabilistisch konsistente (d.h. keine
+      Verletzung der Kolmogorov-Axiome), aber völlig realitätsferne
+      Wahrscheinlichkeitsfuntionen als schlecht/falsch aus?
+    \end{description}
+  \end{frame}
+
+  \subsection{1. Intellectualist Objection}
+
+\begin{frame}
+Art des Arguments:
+
+  \begin{enumerate}[<+->]
+  \item Bayesian Inference ist schwer und kognitiv anspruchsvoll.
+    \begin{itemize}[<+->]
+    \item Evidenz für notorisch schlechte Bayesian Inference bei
+      Erwachsenen (Linda the Bank-Teller)
+    \end{itemize}
+  \item Wahrnehmung ist einfach und automatisch.
+    \begin{itemize}[<+->]
+    \item (Kinder und auch Tiere können reliabel wahrnehmen. Außerdem
+    
+    \end{itemize}
+\item Also: Bayesian Inference und Wahrnehmung sind verschieden.
+  \end{enumerate}
+
+
+\end{frame}
+
+\begin{frame}
+  Zu intellektualistisch? -> Immediate Intuition von formaler
+  Erkenntnistheorie, in der Degress of Belief Bayesianistisch Updatet
+  werden. Hier aber perception: Inhalte mussen keinen propositionalen
+  Gehalt haben, nicht bewusst zugaenglich sein, usw.  Ähnlichkeit zu
+  Konditionalisierungregel in formaler Erkenntnistheorie. Unterschied:
+  Keine Anforderung, dass $e$ oder $h$ Überzeugungen sind,
+  möglicherweise nicht-propotisitional.
+\end{frame}
 
 \end{document}
 
 
+\subsection{2. Anthromorphist Objection}
+
+\subsection{3. Phenomenologist Objection}
+
+\subsection{4. Pathologicalist Objection}

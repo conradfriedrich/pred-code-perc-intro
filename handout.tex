@@ -1,0 +1,92 @@
+
+%\documentclass[12pt]{beamer}
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+\title{Jakob Hohwy: The Predictive Mind}
+\author{\small Conrad Friedrich // Universität zu Köln \\ \small Seminar: Theorien der Wahrnehmung und Predictive Coding WS16/17 \\ \small Prof. Albert Newen // \small Ruhr-Universität Bochum}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+  \maketitle
+
+\section{Perception and Bayesian Inference}
+
+
+Zentrale Idee: Das Gehirn lässt sich als
+    Hypothesen-Prüf-Mechanismus betrachten, der durchgehend damit
+    beschäftigt ist, die Abweichung seiner Vorhersagen/Erwartungen
+    (predictions) von seinen Sinneseindrücken zu \emph{minimieren}.
+
+
+\subsection{Bayesian Inference}
+
+  Zutaten für die Bayesianistische Inferenz:
+
+  \begin{description}
+  \item[$h_1,...,h_n$] Möglichen Hypothesen als Ursache eines
+    Sinneseindrucks
+  \item[$e$] Gegebener Sinneseindruck
+  \item[$P(h_i)$] \emph{Prior:} Wahrscheinlichkeit einer Hypothese
+    $h_i$, unabhängig davon, ob es die Ursache ist. Abhängig vom
+    Hintergrundwissen.
+  \item[$P(e|h_i)$] \emph{Likelihood:} Wahrscheinlichkeit, dass die in
+    der Hypothese beschrieben Ursache so einen Sinneseindruck
+    hervorrufen würde. Abhängig vom Hintergrundwissen. Maß dafür, wie
+    gut eine Hypothese den Sinneseindruck \emph{vorhersagt}.
+  \end{description}
+
+
+  Vereinfachtes Bayes Theorem 
+
+  \begin{align*}
+    P(h_i|e) &= P(e|h_i)P(h_i) \\
+    \mathrm{Posterior \: Probability} &= \mathrm{Likelihood} \times  \mathrm{Prior \: Probability}
+  \end{align*}
+
+  \begin{itemize}
+  \item Hypothese $h_i$, für die $P(h_i|e)$ maximal ist, stellt
+    plausibelste Ursache des Sinneseindrucks $e$ dar, gegeben das
+    Hintergrundwissen des Agenten.
+  \end{itemize}
+
+\section{Objections}
+
+\subsection{Einwand vom Intellektualistismus}
+
+  \noindent Argument:
+
+  \begin{enumerate}
+  \item Bayesian Inference ist schwer und kognitiv anspruchsvoll.
+  \item Wahrnehmung ist einfach und automatisch.
+  \item Also: Bayesian Inference und Wahrnehmung sind verschieden.
+  \end{enumerate}
+
+
+\noindent  Hohwys Strategie:
+  \begin{itemize}
+  \item Fallstudien, deren \emph{beste Erklärung} eine automatische
+    Inferenzleistung des Gehirns ist.
+  \item Mindestens eine der beiden Prämissen ist dann nicht haltbar.
+  \item Studien basieren auf dem Phänomen \emph{Binocular Rivalry}.
+  \item Hohwy: Phänomen lässt sich am besten mit Bayesian Inference
+    erklären.
+  \end{itemize}
+
+\noindent  Bayesianistisches Modell erklärt, warum ein konstantes Bild gesehen
+  wird.
+
+\subsection{Einwand vom Anthromorphismus}
+
+\subsection{Einwand von der Phänomenologie}
+
+
+\subsection{Einwand vom Skeptizismus}
+
+\section{Prediction Error Minimization}
+
+
+\end{document}
